@@ -8,67 +8,146 @@
 
     <!--  滑动视图  -->
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager1"
+        android:id="@+id/viewpager_homepage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.1" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <!-- 分割线   -->
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="3px"
-        android:background="#369"></View>
+        android:layout_height="1dp"
+        android:background="#369" />
 
     <!-- 下方导航栏   -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="50dp"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/view_list0"
+        <!-- 使用相对布局来对图标与文字进行定位 -->
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="首页"
-            android:textSize="15sp" />
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/view_list1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="全部服务"
-            android:textSize="15sp" />
+            <!-- 图标视图 -->
+            <View
+                android:id="@+id/frame_homepage"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/frame_homepage" />
 
-        <TextView
-            android:id="@+id/view_list2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="智慧党建"
-            android:textSize="15sp" />
+            <!-- 文字视图 -->
+            <TextView
+                android:id="@+id/textview_list0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_homepage"
+                android:layout_centerInParent="true"
+                android:text="@string/navigation_Homepage"
+                android:textColor="#0000FF"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/view_list3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="新闻"
-            android:textSize="15sp" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/view_list4"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="个人中心"
-            android:textSize="15sp" />
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/frame_service"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/frame_service" />
+
+            <TextView
+                android:id="@+id/textview_list1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_service"
+                android:layout_centerInParent="true"
+                android:text="@string/navigation_All_Services"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/frame_political"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/frame_political" />
+
+            <TextView
+                android:id="@+id/textview_list2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_political"
+                android:layout_centerHorizontal="true"
+                android:text="@string/navigation_Smart_Party_Building"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/frame_new"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/general_drive_file" />
+
+            <TextView
+                android:id="@+id/textview_list3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_new"
+                android:layout_centerHorizontal="true"
+                android:text="@string/navigation_New"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/frame_user"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/frame_user" />
+
+            <TextView
+                android:id="@+id/textview_list4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_user"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/navigation_Personal"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
