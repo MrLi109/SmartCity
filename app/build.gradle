@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.smartcity"
-        minSdk 24
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -36,9 +36,7 @@ dependencies {
 
 //补充包
     implementation 'com.github.bumptech.glide:glide:4.15.1'
-    implementation files('libs\\gson-2.8.0.jar')
-    implementation files('libs\\GsonFormat.jar')
-    releaseImplementation 'io.github.youth5201314:banner:2.2.2'
+    implementation 'io.github.youth5201314:banner:2.2.2'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
