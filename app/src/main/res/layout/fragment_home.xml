@@ -1,6 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" />
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner_homePage"
+        android:layout_width="match_parent"
+        android:layout_height="134.6dp"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true">
+    </com.youth.banner.Banner>
+
+    <GridView
+        android:id="@+id/girdView_homePage"
+        android:layout_width="match_parent"
+        android:layout_height="134.6dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/banner_homePage"
+
+        android:layout_centerHorizontal="true"
+        android:numColumns="5" />
+
+    <LinearLayout
+        android:id="@+id/linear_homePage"
+        android:layout_width="match_parent"
+        android:layout_height="46.3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:baselineAligned="false"
+        android:layout_below="@id/girdView_homePage"
+        android:background="@drawable/blackground"
+        android:orientation="horizontal">
+
+        <!-- 使用相对布局来对图标与文字进行定位 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <!-- 文字视图 -->
+            <TextView
+                android:id="@+id/homeTextView_list0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/navigation_Homepage"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/homeView_list0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeTextView_list0"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/blue_rectangle">
+
+            </View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/homeTextView_list1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/navigation_All_Services"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/homeView_list1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeTextView_list1"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/white_rectangle">
+
+            </View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/homeTextView_list2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/navigation_Smart_Party_Building"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/homeView_list2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeTextView_list2"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/white_rectangle">
+
+            </View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/homeTextView_list3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/navigation_New"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/homeView_list3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeTextView_list3"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/white_rectangle">
+
+            </View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/homeTextView_list4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/navigation_Personal"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/homeView_list4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeTextView_list4"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/white_rectangle">
+
+            </View>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2_homePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#F7F7F7"
+        android:layout_below="@id/linear_homePage">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+</RelativeLayout>
